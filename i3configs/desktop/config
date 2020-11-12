@@ -30,6 +30,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# bluetooth
+exec --no-startup-id blueman-applet
+
 # Start Dropbox
 exec --no-startup-id dropbox start
 
@@ -208,7 +211,8 @@ bar {
 for_window [class=".*"] border pixel 2
 
 # Set inner/outer gaps
-gaps inner 10
-gaps outer 10
+gaps inner 14
+gaps outer -2
 
-
+smart_gaps on
+smart_borders on

@@ -78,6 +78,8 @@ let g:vimtex_indent_on_ampersands = 0
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
+" Runs c files
+autocmd FileType c map <F9> :w<CR>:exec'!gcc % -o %< && ./%<'<CR>
 
 " Hotkeys for Vimpyter
 autocmd Filetype ipynb nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
